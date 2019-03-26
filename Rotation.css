@@ -1,0 +1,107 @@
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+body{
+	background-color: #ccc;
+	width: 3000px;
+	height: 1500px;
+}
+
+.wrapper{
+	width: 720px;
+	height: 412px;
+	margin:100px auto;
+	overflow: hidden;/*元素内容溢出时，隐藏溢出部分*/
+	position: relative;
+}
+
+.wrapper .box{
+	width: 400%;
+	position: absolute;
+	left: 0;
+	top: 0;s
+	transition: left 1s;
+}
+
+.box ul li{
+	float: left;
+}
+
+.box img{
+	width: 720px;
+	height: 410px;
+}
+
+.wrapper .next{
+	width:0px;
+	height: 0px;
+	position: absolute;
+	z-index: 99;/*表示一个元素在叠加顺序上的上下立体关系，z-index值大的元素叠加在值较小的元素之上*/
+	right :0px
+	float:left;
+	top:185px;
+	border:30px solid rgba(200,200,200,0.4);
+	border-right-color: transparent;/*透明*/
+	border-top-color: transparent;
+	border-bottom-color: transparent
+}
+
+.wrapper .next:hover{
+	border:30px solid rgba(200,200,200,0.9);
+	border-right-color: transparent;/*透明*/
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	cursor: pointer;/*要显示的光标的类型*/
+}
+
+.wrapper .last{
+	width:0px;
+	height: 0px;
+	position: absolute;
+	z-index: 99;/*表示一个元素在叠加顺序上的上下立体关系，z-index值大的元素叠加在值较小的元素之上*/
+	right: 0px;
+	top:185px;
+	border:30px solid rgba(200,200,200,0.4);
+	border-left-color: transparent;/*透明*/
+	border-top-color: transparent;
+	border-bottom-color: transparent
+}
+
+.wrapper .last:hover{
+	border:30px solid rgba(200,200,200,0.9);
+	border-left-color: transparent;/*透明*/
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	cursor: pointer;/*要显示的光标的类型*/
+}
+
+.wrapper .dot{
+	width: 400px;
+	height: 30px;
+	position: absolute;
+	top: 330px;
+	left: 295px;
+	line-height: 30px;
+}
+
+.wrapper .dot li{
+	width: 15px;
+	height: 15px;
+	background-color:rgba(200,200,200,0.4);
+	border:2px solid #eee;
+	border-radius: 50%;
+	float: left;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.wrapper .dot li:hover{
+	background-color: rgba(200,200,200,1);
+}
+
+.wrapper .dot .act{
+	background-color: rgba(200,200,200,0.8);
+}
